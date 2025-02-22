@@ -2,6 +2,9 @@ FROM gitpod/workspace-full
 
 USER gitpod
 
+# Install any additional tools or dependencies here
+RUN npm install
+
 # Install Node.js and Git
 RUN curl -sL https://deb.nodesource.com/setup_16.x | bash - && apt-get install -y nodejs git
 
